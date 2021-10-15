@@ -70,6 +70,7 @@
 .tiles-info__card h4 {
     margin: 0;
     color: var(--main-color);
+    font-size: 1.1rem;
 }
 
 .tiles-info__card p {
