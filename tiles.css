@@ -1,0 +1,162 @@
+.tiles-photo .tile {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+    padding:var(--padding);
+    min-height: 200px;
+}
+
+.tiles-photo .pohoda, .tiles-photo .romantika {
+    min-height: 350px;
+}
+
+.tiles-photo .upper p {
+    background-color: var(--main-color);
+    display: inline-block;
+    padding: 10px;
+    margin: 0;
+}
+
+.tile {
+    background-size: cover;
+    margin-top: var(--padding);
+}
+
+.tile h4 {
+    margin-bottom: 10px;
+}
+
+.pohoda {
+    background-image: url("./podklady/palmy.jpg");  
+}
+
+.klid {
+    background-image: url("./podklady/jezero.jpg");
+}
+
+.vylet {
+    background-image: url("./podklady/nakole.jpg");
+}
+
+.romantika {
+    background-image: url("./podklady/lodicka.jpg");
+}
+
+.grand {
+    background-image: url("./podklady/podkova.jpg");
+}
+
+.pesky {
+    background-image: url("./podklady/zatoka.jpg");
+}
+
+.tiles-info {
+    margin-top: var(--padding-big);
+}
+
+.tiles-info__card {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding: var(--padding);
+    background-color: #f0f0f0;
+    margin-top: var(--padding);
+}
+
+.tiles-info__card img {
+    width: 60%;
+}
+
+.tiles-info__card h4 {
+    margin: 0;
+    color: var(--main-color);
+}
+
+.tiles-info__card p {
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.tiles-info__nopic .tiles-info__card {
+    grid-template-columns: 1fr;
+}
+
+.tiles-info__nopic p:first-child {
+    font-weight: normal;
+}
+
+.tiles-info__nopic p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tiles-info__nopic {
+    margin-bottom: var(--padding-big);
+}
+
+@media screen and (min-width: 768px) {
+    .tiles-photo .pohoda, .tiles-photo .romantika {
+        min-height: 350px;
+    }
+
+    .tiles-photo__lower-part {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--padding);
+    }
+
+    .tiles-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        text-align: center;
+    }
+
+    .tiles-info__card {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+    }
+
+    .tiles-info__card img {
+        height: 35px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .tiles-photo {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: var(--padding);
+    }
+
+    .tiles-photo__lower-part {
+        grid-template-columns: 1fr;
+    }
+
+    .tile {
+        margin: 0;
+    }
+
+    .tiles-photo .tile:first-child {
+        height: 100%;
+    }
+
+    .tiles-info {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .tiles-info__nopic {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--padding);
+    }
+
+    .last-minute {
+        grid-template-columns: 1fr 2fr; 
+    }
+
+    .last-minute  .tiles-photo__lower-part{
+        grid-area: 1;
+    }
+}
